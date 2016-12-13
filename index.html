@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="styles/main.css">
 
@@ -22,7 +22,7 @@
         <div class="box row">
           <div class="email-password-area  col-xs-12" ng-class="[hasProviders ? 'small col-sm-8' : 'large col-sm-12']">
             <div class="header">
-              <span>ANOTHER TEST Log In</span>
+              <span>TEST Log In</span>
               <span ng-show="canRegister" wd-can-register>
                 <span> or </span>
                 <a href="#register">Create an Account</a>
@@ -359,6 +359,13 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <div class="custom-header" ng-controller="HeaderFooter">
+      <div class="version-number">1</div>
+      <img class="custom-header-logo" ng-src="{{logoUrl}}"/>
+      <a ng-href="{{backUrl}}" class="custom-header-back-url">{{backUrlLabel}}</a>
+      <div class="custom-header-login-prompt">{{loginPromptText}}</div>
+    </div>
+
     <div class="container" ng-controller="ErrorCtrl" ng-cloak>
       <div class="logo-container">
         <img ng-show="logoUrl" class="logo img-responsive" ng-src="{{logoUrl}}"/>
@@ -367,6 +374,11 @@
       <div ng-hide="inError" ng-view="">
         <!-- this will be replaced a the view, as determined by the route config in app.js -->
       </div>
+    </div>
+
+    <div class="custom-footer" ng-controller="HeaderFooter">
+      <div class="custom-footer-join-prompt" ng-bind-html="joinPromptText"></div>
+      <div class="custom-footer-disclaimer">{{disclaimerText}}</div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
