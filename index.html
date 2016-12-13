@@ -22,7 +22,7 @@
         <div class="box row">
           <div class="email-password-area  col-xs-12" ng-class="[hasProviders ? 'small col-sm-8' : 'large col-sm-12']">
             <div class="header">
-              <span>TEST Log In</span>
+              <span>Log In</span>
               <span ng-show="canRegister" wd-can-register>
                 <span> or </span>
                 <a href="#register">Create an Account</a>
@@ -360,7 +360,7 @@
     <![endif]-->
 
     <div class="custom-header" ng-controller="HeaderFooter">
-      <img class="custom-header-logo" ng-src="{{logoUrl}}"/>
+      <img class="custom-header-logo" ng-src="{{headerLogoUrl}}"/>
       <a ng-href="{{backUrl}}" class="custom-header-back-url">{{backUrlLabel}}</a>
       <div class="custom-header-login-prompt">{{loginPromptText}}</div>
     </div>
