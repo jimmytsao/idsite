@@ -360,7 +360,6 @@
     <![endif]-->
 
     <div class="custom-header" ng-controller="HeaderFooter">
-      <div class="version-number">1</div>
       <img class="custom-header-logo" ng-src="{{logoUrl}}"/>
       <a ng-href="{{backUrl}}" class="custom-header-back-url">{{backUrlLabel}}</a>
       <div class="custom-header-login-prompt">{{loginPromptText}}</div>
@@ -377,7 +376,7 @@
     </div>
 
     <div class="custom-footer" ng-controller="HeaderFooter">
-      <div class="custom-footer-join-prompt" ng-bind-html="joinPromptText"></div>
+      <div class="custom-footer-join-prompt" ng-bind-html="joinPromptText">{{joinPromptText}}</div>
       <div class="custom-footer-disclaimer">{{disclaimerText}}</div>
     </div>
 
